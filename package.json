@@ -1,0 +1,20 @@
+{
+  "name": "awokennode",
+  "version": "1.0.0",
+  "description": "a node js REST api to communicate with my Database for all different uses in one place.",
+  "main": "index.js",
+  "scripts": {
+    "productionServer": "node server.js",
+    "devServer": "nodemon server.js"
+  },
+  "author": "Traceton Timmerman",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.28"
+  }
+}
