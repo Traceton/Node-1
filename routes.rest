@@ -1,0 +1,30 @@
+
+
+GET http://localhost:5005/contactForms
+
+
+
+
+
+
+
+###
+
+
+
+
+
+
+
+
+POST http://localhost:5005/contactForms
+Content-Type: application/json
+
+{
+    "fullName": "traceton timmerman",
+    "phone": 8652827107,
+    "email": "traceton.timmerman@gmail.com",
+    "message": "Lets see if this works"
+    
+    }
+
