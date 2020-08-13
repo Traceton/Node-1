@@ -3,7 +3,9 @@ const router = express();
 const ContactForm = require("../models/contactForm");
 
 // get all contact forms
-router.get("/", (req, res) => {});
+router.get("/", (req, res) => {
+  res.send(`<h1>Contact forms</h1>`);
+});
 // get single contact form
 router.get("/:id", (req, res) => {});
 // create single contact form

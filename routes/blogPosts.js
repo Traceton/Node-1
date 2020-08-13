@@ -3,7 +3,9 @@ const router = express();
 const BlogPost = require("../models/blogPost");
 
 // get all blog posts
-router.get("/", (req, res) => {});
+router.get("/", (req, res) => {
+  res.send(`<h1>Blog Posts</h1>`);
+});
 
 // get single blog post
 router.get("/:id", (req, res) => {});
