@@ -1,9 +1,20 @@
 const express = require("express");
 const router = express();
 const ContactForm = require("../models/contactForm");
+const contactForm = require("../models/contactForm");
 
 // find contact form by id, middleware function
-let findContactForm = (req, res, next) => {
+let findContactForm = async (req, res, next) => {
+  let contactForm;
+  try {
+    contactForm = await ContactForm.findById(req.params.id);
+    if (contactForm == null) {
+      return res.status(404).json({ message: "Cannot find that contact form" });
+    }
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+  res.contactForm = contactForm;
   next();
 };
 
@@ -17,7 +28,13 @@ router.get("/", async (req, res) => {
   }
 });
 // get single contact form
-router.get("/:id", (req, res) => {});
+router.get("/:id", findContactForm, (req, res) => {
+  try {
+    res.status(201).json(res.contactForm);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
 // create single contact form
 router.post("/", async (req, res) => {
   const newContactForm = await new ContactForm({
@@ -34,8 +51,35 @@ router.post("/", async (req, res) => {
   }
 });
 // delete single contact form
-router.delete("/:id", (req, res) => {});
+router.delete("/:id", findContactForm, async (req, res) => {
+  try {
+    await res.contactForm.remove();
+    res.status(201).json({ message: "contact form deleted" });
+  } catch (error) {
+    res.status(500).json({ message: "contact for could not be deleted" });
+  }
+});
 // update single contact form
-router.patch("/:id", (req, res) => {});
+router.patch("/:id", findContactForm, async (req, res) => {
+  if (req.body.fullName != null) {
+    res.contactForm.fullName = req.body.fullName;
+  }
+  if (req.body.phone != null) {
+    res.contactForm.phone = req.body.phone;
+  }
+  if (req.body.email != null) {
+    res.contactForm.email = req.body.email;
+  }
+  if (req.body.message != null) {
+    res.contactForm.message = req.body.message;
+  }
+
+  try {
+    const updatedContactForm = await res.contactForm.save();
+    res.status(201).json(updatedContactForm);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
 
 module.exports = router;

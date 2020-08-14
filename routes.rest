@@ -15,16 +15,63 @@ GET http://localhost:5005/contactForms
 
 
 
+DELETE http://localhost:5005/contactForms/5f34bde4962648189af842a7
+
+
+
+
+
+
+
+###
+
+
+
+
+
+
 
 
 POST http://localhost:5005/contactForms
 Content-Type: application/json
 
 {
-    "fullName": "traceton timmerman",
+    "fullName": "traceton TEST timmerman",
     "phone": 8652827107,
-    "email": "traceton.timmerman@gmail.com",
-    "message": "Lets see if this works"
+    "email": "TEST EMAIL TEST EMAIL",
+    "message": "TEST MESSAGE TEST MESSAGE"
     
     }
 
+
+
+
+
+
+
+###
+
+
+
+
+
+
+
+GET http://localhost:5005/contactForms/5f34bdf0e0508118acda30a7
+
+
+
+
+
+###
+
+
+
+
+
+PATCH  http://localhost:5005/contactForms/5f35f7784c412827307ca7e0
+Content-Type: application/json
+
+{
+    "phone": 1111111111
+}
