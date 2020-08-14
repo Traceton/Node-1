@@ -2,10 +2,11 @@ const express = require("express");
 const router = express();
 const BlogPost = require("../models/blogPost");
 
+// find blog post by id
+let findBlogPost = async () => {};
+
 // get all blog posts
-router.get("/", (req, res) => {
-  res.send(`<h1>Blog Posts</h1>`);
-});
+router.get("/", (req, res) => {});
 
 // get single blog post
 router.get("/:id", (req, res) => {});
