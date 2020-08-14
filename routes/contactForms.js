@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express();
 const ContactForm = require("../models/contactForm");
-const contactForm = require("../models/contactForm");
 
 // find contact form by id, middleware function
 let findContactForm = async (req, res, next) => {
