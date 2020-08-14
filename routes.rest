@@ -75,3 +75,82 @@ Content-Type: application/json
 {
     "phone": 11111112111
 }
+
+
+
+
+
+
+
+# blog posts below
+
+
+###
+
+
+
+
+GET http://localhost:5005/blogPosts
+
+
+
+
+
+
+
+###
+
+
+
+
+
+POST http://localhost:5005/blogPosts
+Content-Type: application/json
+
+{
+    "topic": "coding",
+    "creator": "Traceton Timmerman",
+    "headline": "How to make a REST API!",
+    "mainBody": "main body should go here",
+    "private": "false"
+    
+    }
+
+
+
+
+
+
+
+###
+
+
+
+
+
+
+GET http://localhost:5005/blogPosts/5f3601167e0db129aefe0c41
+
+
+
+
+###
+
+
+
+
+
+DELETE http://localhost:5005/blogPosts/5f3601167e0db129aefe0c41
+
+
+
+###
+
+
+
+PATCH  http://localhost:5005/blogPosts/5f3612a8eee1aa2ce140b06d
+Content-Type: application/json
+
+{
+    "private": true
+}
