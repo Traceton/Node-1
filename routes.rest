@@ -1,4 +1,4 @@
-
+# This file is used to test the contact forms routes and functionality.
 
 GET http://localhost:5005/contactForms
 

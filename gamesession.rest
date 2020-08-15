@@ -1,3 +1,5 @@
+# This file is used to test the game sessions routes and functionality.
+
 
 
 GET http://localhost:5005/gameSessions
