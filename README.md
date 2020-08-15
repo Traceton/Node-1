@@ -1,5 +1,5 @@
 # awokenNode
-### A basic Nodejs REST API with premade user,blog post, contact forms, and game session routes and models.
+### A basic Node.js REST API with pre-made user, blog post, contact form, and game session routes and models.
 ## :star:  Features
  custom config, or use as-is.
  
