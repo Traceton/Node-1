@@ -1,0 +1,84 @@
+
+
+GET http://localhost:5005/gameSessions
+
+
+
+
+
+
+
+###
+
+
+
+
+
+
+DELETE http://localhost:5005/gameSessions/5f36a91bf2279930d589937d
+
+
+
+
+
+
+
+###
+
+
+
+
+
+
+
+
+POST http://localhost:5005/gameSessions
+Content-Type: application/json
+
+{
+    "username": "Tjcharm",
+    "game": "speedBall",
+    "numScore": 20,
+    "stringScore": "numScore only"
+    
+    }
+
+
+
+
+
+
+
+###
+
+
+
+
+
+
+
+
+
+GET http://localhost:5005/gameSessions/5f36a91bf2279930d589937d
+
+
+
+
+
+
+
+###
+
+
+
+
+
+PATCH  http://localhost:5005/gameSessions/5f3743e21dfb793c650dc3c7
+Content-Type: application/json
+
+{
+   "numScore": 21
+}
+
+
+

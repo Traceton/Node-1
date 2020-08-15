@@ -8,11 +8,11 @@ const gameSessionSchema = new mongoose.Schema({
   },
   numScore: {
     type: Number,
-    required: false,
+    required: true,
   },
   stringScore: {
     type: String,
-    required: false,
+    required: true,
   },
   game: {
     type: String,
