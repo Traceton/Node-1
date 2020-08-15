@@ -15,7 +15,7 @@ GET http://localhost:5005/users
 
 
 
-DELETE http://localhost:5005/users/5f36a91bf2279930d589937d
+DELETE http://localhost:5005/users/5f383023b2e03546174f1544
 
 
 
@@ -37,9 +37,8 @@ Content-Type: application/json
 
 {
     "username": "Tjcharm",
-    "game": "speedBall",
-    "numScore": 20,
-    "stringScore": "numScore only"
+    "password": "Test password",
+    "email": "test email"
     
     }
 
@@ -59,7 +58,7 @@ Content-Type: application/json
 
 
 
-GET http://localhost:5005/users/5f36a91bf2279930d589937d
+GET http://localhost:5005/users/5f38307d2188eb464597ee43
 
 
 
@@ -73,11 +72,11 @@ GET http://localhost:5005/users/5f36a91bf2279930d589937d
 
 
 
-PATCH  http://localhost:5005/users/5f3743e21dfb793c650dc3c7
+PATCH  http://localhost:5005/users/5f38307d2188eb464597ee43
 Content-Type: application/json
 
 {
-   "numScore": 21
+   "email": "test email 2"
 }
 
 

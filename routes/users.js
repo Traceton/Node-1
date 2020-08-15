@@ -13,6 +13,7 @@ let findUser = async (req, res, next) => {
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
+  res.user = user;
   next();
 };
 
@@ -34,7 +35,7 @@ router.get("/:id", findUser, (req, res) => {
   }
 });
 // create a single user
-router.post("/", (req, res) => {
+router.post("/", async (req, res) => {
   let user = new User({
     firstName: req.body.firstName,
     lastName: req.body.lastName,
@@ -42,6 +43,12 @@ router.post("/", (req, res) => {
     password: req.body.password,
     email: req.body.email,
   });
+  try {
+    const newUser = await user.save();
+    res.status(201).json(newUser);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
 });
 // delete a single user
 router.delete("/:id", findUser, async (req, res) => {
