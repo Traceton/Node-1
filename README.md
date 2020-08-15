@@ -6,15 +6,15 @@
  Free and open source.
  
  Simple and clean.
+ 
+ ### :copyright: License
+[MIT License](http://opensource.org/licenses/MIT)
 
 # 🚀  To get started ->
 
  ```sh
 $ git clone https://github.com/tjcharm/awokenNode.git
 ```
-
-### :copyright: License
-[MIT License](http://opensource.org/licenses/MIT)
 
 ## Release V1.0-alpha would be the ideal release for somebody looking to implement custom authentication and authorization for use in their own REST API. Simple to understand, and easy to change to your own liking before things get a little more challenging state to modify. 
 
