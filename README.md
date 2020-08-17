@@ -1,4 +1,5 @@
-# awokenNode
+
+# RestingNode
 
 ### A basic Node.js REST API with pre-made user, blog post, contact form, and game session routes and models.
 
@@ -15,6 +16,7 @@ Simple and clean.
 [MIT License](http://opensource.org/licenses/MIT)
 
 # 🚀 To get started ->
+
 
 ```sh
 npm i awokennode
