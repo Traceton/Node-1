@@ -34,14 +34,15 @@ DELETE http://localhost:5005/gameSessions/5f36a91bf2279930d589937d
 
 
 
-POST http://localhost:5005/gameSessions
+POST https://resting-node.herokuapp.com/gameSessions
 Content-Type: application/json
 
 {
     "username": "Tjcharm",
-    "game": "speedBall",
-    "numScore": 20,
-    "stringScore": "numScore only"
+    "numScore": 43,
+    "stringScore": "numScore",
+    "datePlayed": "2020-08-10T16:49:37.516Z",
+    "game": "speedBall"
     
     }
 
