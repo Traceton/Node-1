@@ -19,8 +19,6 @@ Simple and clean.
 
 
 ```sh
-npm i awokennode
-or
 $ git clone https://github.com/tjcharm/awokenNode.git
 ```
 
