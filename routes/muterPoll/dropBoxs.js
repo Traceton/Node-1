@@ -1,12 +1,11 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const message = require("../models/message");
 const router = express();
 const sgMail = require("@sendgrid/mail");
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-const DropBox = require("../models/muterPoll/dropBox");
-const DropBoxAnswer = require("../models/muterPollDropBoxAnswer");
+const DropBox = require("../../models/muterPoll/dropBox");
+const DropBoxAnswer = require("../../models/muterPoll/dropBoxAnswer");
 
 // get all drop boxes
 router.get("/dropBox", async (req, res) => {
