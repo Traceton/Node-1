@@ -3,10 +3,9 @@ const express = require("express");
 const mongoose = require("mongoose");
 const server = express();
 const database = mongoose.connection;
-const contactFormsRouter = require("./routes/contactForms");
-const blogPostsRouter = require("./routes/blogPosts");
-const usersRouter = require("./routes/users");
-const gameSessionsRouter = require("./routes/gameSessions");
+
+const dropBoxRouter = require("./routes/muterPoll/dropBoxs");
+
 mongoose.connect(process.env.DATABASE_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -30,10 +29,7 @@ server.use((req, res, next) => {
   next();
 });
 
-server.use("/contactForms", contactFormsRouter);
-server.use("/blogPosts", blogPostsRouter);
-server.use("/users", usersRouter);
-server.use("/gameSessions", gameSessionsRouter);
+server.use("/dropBoxes", dropBoxRouter);
 
 server.listen(process.env.PORT, () => {
   console.log(`running at http://localhost:${process.env.PORT}`);

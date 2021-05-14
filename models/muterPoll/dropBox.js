@@ -1,23 +1,23 @@
 const mongoose = require("mongoose");
 
-const userSchema = new mongoose.Schema({
-  firstName: {
-    type: String,
-    required: false,
-  },
-  lastName: {
-    type: String,
-    required: false,
-  },
-  username: {
+const dropBoxSchema = new mongoose.Schema({
+  dropBoxId: {
     type: String,
     required: true,
   },
-  password: {
+  dropBoxName: {
     type: String,
     required: true,
   },
-  email: {
+  dropBoxQuestion: {
+    type: String,
+    required: true,
+  },
+  dropBoxPassword: {
+    type: String,
+    required: true,
+  },
+  dropBoxLocation: {
     type: String,
     required: false,
   },
@@ -28,4 +28,4 @@ const userSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("user", userSchema);
+module.exports = mongoose.model("dropBox", dropBoxSchema);

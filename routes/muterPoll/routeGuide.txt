@@ -1,0 +1,7 @@
+A guide of how each route should work and respond.
+
+Each route should ALWAYS return a message_type, message,
+ and the rest of the response.
+
+the message type should return different strings as follows:
+to do.....
