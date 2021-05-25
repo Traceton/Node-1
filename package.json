@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "productionServer": "node server.js",
-    "devServer": "nodemon server.js"
+    "devServer": "nodemon server.js",
+    "node-treker": "node node_modules/node-treker/index.js"
   },
   "author": "Traceton Timmerman",
   "license": "ISC",
