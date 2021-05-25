@@ -10,6 +10,7 @@
   "author": "Traceton Timmerman",
   "license": "ISC",
   "devDependencies": {
+    "node-treker": "^1.1.0",
     "nodemon": "^2.0.4"
   },
   "dependencies": {
